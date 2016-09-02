@@ -1,0 +1,16 @@
+<h1>Register Page</h1>
+
+<hr/>
+
+<% @contacts.each do |contact| %>
+  <%= contact.family_name %>
+  <%= contact.given_name %>
+  <%= contact.email %>
+  <%= contact.home_address %>
+  <form action="/updatedlist/update" method="get">
+    <input type="hidden" name="id" value="<%= contact.id%>">
+    <input type="submit" value="Update">
+  </form>
+
+  <br/>
+<% end %>

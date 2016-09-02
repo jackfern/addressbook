@@ -1,0 +1,2 @@
+module ContactlistHelper
+end
